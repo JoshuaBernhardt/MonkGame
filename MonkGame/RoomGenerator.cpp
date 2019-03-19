@@ -11,11 +11,8 @@ RoomGenerator::~RoomGenerator()
 
 std::vector<int> RoomGenerator::generateDungeon()
 {
-	std::vector<int> dungeon;
+	std::vector<int> { 0,1,0,1,1,2 };
 
-	int room = randomRoom();
-
-	dungeon.push_back(room);
 
 	
 	return dungeon;

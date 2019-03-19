@@ -1,6 +1,9 @@
 
 #include "Game.h"
 
+#include <iostream>
+using namespace std;
+
 Game *game = nullptr;
 
 int difficulty = 1;
@@ -18,10 +21,11 @@ int main(int argc, char *argv[])
 	game->createPlayer();
 	game->createDungeon();
 
+
 	while (game->running()) {  //the game loop
 		
-
 	}
+
 
 
 	return 0;

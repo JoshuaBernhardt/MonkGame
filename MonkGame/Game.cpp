@@ -4,6 +4,7 @@
 #include "RoomGenerator.h"
 #include <iostream>
 #include <vector>
+#include <fstream>
 using namespace std;
 
 Player *player = nullptr;
@@ -18,17 +19,28 @@ Game::~Game()
 
 void Game::eventHandler()
 {
-
+	
 }
 
 void Game::update()
 {
 }
 
-void Game::updateLog()
+void Game::updateLog(std::string text)
 {
 
+	
+	ofstream log;
+	log.open("log.txt", std::ios_base::app);
+	log << text << "\n";
+
+	if (isRunning == false) {
+		log.close();
+	}
+
+	
 }
+
 
 
 int Game::getDifficulty() {
@@ -79,6 +91,11 @@ void Game::createPlayer()
 	player->setName(name);
 	player->setDesc(desc);
 
+	std::string n = player->getName();
+
+	updateLog(name);
+	updateLog(desc);
+
 }
 
 void Game::createEnemy()
@@ -100,7 +117,11 @@ void Game::startGame()
 
 	
 
+	
+
 }
+
+
 
 int Game::createDungeon()
 {
@@ -108,7 +129,13 @@ int Game::createDungeon()
 
 	roomgenerator->generateDungeon();
 
+
+
+	return 0;
 }
 
+void Game::currentRoom()
+{
 
+}
 

@@ -1,7 +1,7 @@
 #ifndef Game_h
 #define Game_h
 
-
+#include <vector>
 #include <iostream>
 using namespace std;
 
@@ -19,7 +19,7 @@ public:
 
 	int getDifficulty();
 
-	void updateLog();
+	void updateLog(std::string text);
 
 	void createPlayer();
 
@@ -28,6 +28,9 @@ public:
 	void startGame();
 
 	int createDungeon();
+
+	void currentRoom();
+
 
 
 
