@@ -24,9 +24,9 @@ public:
 
 	std::string getDesc();
 
-	void nextRoom();
 
-	void prevRoom();
+	int updatePos();
+	int currentPos();
 
 
 

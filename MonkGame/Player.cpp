@@ -58,13 +58,11 @@ std::string Player::getDesc()
 	return std::string();
 }
 
-void Player::nextRoom()
-{
 
-}
 
-void Player::prevRoom()
+int Player::currentPos()
 {
+	return 0;
 }
 
 

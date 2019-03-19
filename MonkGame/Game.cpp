@@ -123,19 +123,34 @@ void Game::startGame()
 
 
 
-int Game::createDungeon()
+std::vector<int> Game::createDungeon()
 {
 	roomgenerator = new RoomGenerator;
 
-	roomgenerator->generateDungeon();
+	std::vector<int> dungeon = roomgenerator->generateDungeon();
 
-
-
-	return 0;
+	return dungeon;
 }
 
-void Game::currentRoom()
+int Game::currentRoom(int pos)
 {
+	
+	std::vector<int> dungeon = createDungeon();
 
+	int room = dungeon.at(pos);
+
+
+	switch (room) {
+	case 0:
+		std::cout << "Current room is prayer room." << std::endl;
+	case 1:
+		std::cout << "Current room is monster room." << std::endl;
+	case 2:
+		std::cout << "Current room is treasure room." << std::endl;
+	}
+
+	return room;
+	
 }
+
 

@@ -27,9 +27,10 @@ public:
 
 	void startGame();
 
-	int createDungeon();
+	std::vector<int> createDungeon();
 
-	void currentRoom();
+	int currentRoom(int pos);
+
 
 
 
