@@ -91,6 +91,8 @@ void Game::createPlayer()
 	player->setName(name);
 	player->setDesc(desc);
 
+	player->pos = 0;
+
 	std::string n = player->getName();
 
 	updateLog(name);
@@ -115,6 +117,7 @@ void Game::startGame()
 	std::cout << "2: Normal" << std::endl;
 	std::cout << "3: Hard" << std::endl;
 
+
 	
 
 	
@@ -132,25 +135,64 @@ std::vector<int> Game::createDungeon()
 	return dungeon;
 }
 
-int Game::currentRoom(int pos)
+int Game::currentRoom(int pos, std::vector<int> dungeon)
 {
 	
-	std::vector<int> dungeon = createDungeon();
-
 	int room = dungeon.at(pos);
-
 
 	switch (room) {
 	case 0:
 		std::cout << "Current room is prayer room." << std::endl;
+		player->canPray = true;
+		return room;
+		break;
 	case 1:
 		std::cout << "Current room is monster room." << std::endl;
+		player->canPray = false;
+		return room;
+		break;
 	case 2:
 		std::cout << "Current room is treasure room." << std::endl;
+		player->canPray = false;
+		return room;
+		break;
 	}
+
+	player->canPray = false;
 
 	return room;
 	
 }
+
+void Game::runningGame(std::vector<int> dungeon)
+{
+	
+	int pos = player->currentPos();
+	Game::currentRoom(pos, dungeon);
+
+	std::cout << "Move Left: 0,  Move Right:  1, Pray: 2,  Attack:  3" << std::endl;
+
+	int action;
+	std::cin >> action;
+
+	switch (action) {
+	case 0: case 1:
+
+		pos = player->move(pos, action);
+		break;
+
+	case 2:
+		player->pray();
+		break;
+
+	case 3:
+
+	}
+
+	
+	player->pos = pos;
+
+}
+
 
 

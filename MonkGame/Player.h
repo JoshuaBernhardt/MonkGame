@@ -25,20 +25,23 @@ public:
 	std::string getDesc();
 
 
-	int updatePos();
+	void setPos(int p);
+
+	int move(int pos, int input);
+
 	int currentPos();
 
-
-
-
-
+	int pos = 0;
+	bool canPray = false;
 
 
 private:
 	std::string name ="Default";
 	std::string description = "Default";
 	int health;
-	bool canPray = false;
+
+
+
 
 
 };

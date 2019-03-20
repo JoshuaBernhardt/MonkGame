@@ -11,7 +11,6 @@ public:
 
 	std::vector<int> generateDungeon();
 
-	void returnDungeon();
 
 	int randomRoom();
 

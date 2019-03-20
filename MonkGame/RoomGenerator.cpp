@@ -3,6 +3,8 @@
 #include <iostream>
 #include <vector>
 
+using namespace std;
+
 RoomGenerator::RoomGenerator()
 {}
 
@@ -11,8 +13,14 @@ RoomGenerator::~RoomGenerator()
 
 std::vector<int> RoomGenerator::generateDungeon()
 {
-	std::vector<int> dungeon { 0,1,0,1,1,2 };
+	std::vector<int> dungeon;
+
+	for (int i = 0; i < 10; i++) {
+		dungeon.push_back(randomRoom());
+	}
 	
+	dungeon.push_back(2);
+
 	return dungeon;
 	
 }
@@ -21,7 +29,10 @@ std::vector<int> RoomGenerator::generateDungeon()
 
 int RoomGenerator::randomRoom()
 {
-	int selector = rand() % 7;
+
+
+	int selector = rand() % 6;
+
 
 	switch (selector) {
 	case 0: case 1:
@@ -30,10 +41,13 @@ int RoomGenerator::randomRoom()
 	case 2: case 3: case 4:
 		return 1;
 		break;
-	case 5: case 6: case 7:
-		return 2;
+	case 5: case 6:
+
+		return 0;
 		break;
 	}
+
+	
 
 	return 0;
 

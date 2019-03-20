@@ -1,4 +1,5 @@
 #include "Player.h"
+#include "Game.h"
 #include <iostream>
 
 using namespace std;
@@ -6,12 +7,17 @@ using namespace std;
 
 class player
 {
-
+public:
+	int *pos = 0;
+	bool canPray = false;
+	bool canMove = true;
 
 private:
 	std::string name;
 	std::string description;
 	int health = 15;
+	
+
 };
 
 Player::Player()
@@ -58,11 +64,50 @@ std::string Player::getDesc()
 	return std::string();
 }
 
+int Player::move(int pos, int input) {
+	
+	switch (input) {
+	case 0:
+		if (pos > 0) {
+			pos -= 1;
+			return pos;
+			break;
+		}
+
+		std::cout << "You can't go back any further!" << std::endl;
+		return pos;
+		break;
+
+	case 1:
+
+		if (pos < 10) {
+			pos += 1;
+			return pos;
+			break;
+		}
+
+		std::cout << "You can't go any further!" << std::endl;
+
+		return pos;
+		break;
+
+
+		
+
+	}
+
+	return pos;
+}
+
+void Player::setPos(int p)
+{
+	int pos = p;
+}
 
 
 int Player::currentPos()
 {
-	return 0;
+	return this->pos;
 }
 
 
