@@ -34,11 +34,12 @@ public:
 	int pos = 0;
 	bool canPray = false;
 
+	int health;
 
 private:
 	std::string name ="Default";
 	std::string description = "Default";
-	int health;
+	
 
 
 

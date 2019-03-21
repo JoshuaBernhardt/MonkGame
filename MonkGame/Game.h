@@ -21,7 +21,7 @@ public:
 
 	void updateLog(std::string text);
 
-	void createPlayer();
+	std::string createPlayer();
 
 	void createEnemy();
 
@@ -32,6 +32,8 @@ public:
 	int currentRoom(int pos, std::vector<int> dungeon);
 
 	void runningGame(std::vector<int> dungeon);
+
+	void end();
 
 
 

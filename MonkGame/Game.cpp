@@ -1,6 +1,7 @@
 #include "Game.h"
 #include "Player.h"
 #include "Enemy.h"
+#include "Combat.h"
 #include "RoomGenerator.h"
 #include <iostream>
 #include <vector>
@@ -9,7 +10,10 @@ using namespace std;
 
 Player *player = nullptr;
 Enemy *enemy = nullptr;
+Combat *battle = nullptr;
 RoomGenerator *roomgenerator = nullptr;
+
+bool canMove = true;
 
 Game::Game()
 {}
@@ -71,7 +75,7 @@ void Game::setDifficulty(int diff)
 
 }
 
-void Game::createPlayer()
+std::string Game::createPlayer()
 {
 	player = new Player;
 
@@ -97,6 +101,8 @@ void Game::createPlayer()
 
 	updateLog(name);
 	updateLog(desc);
+
+	return n;
 
 }
 
@@ -149,6 +155,8 @@ int Game::currentRoom(int pos, std::vector<int> dungeon)
 	case 1:
 		std::cout << "Current room is monster room." << std::endl;
 		player->canPray = false;
+		canMove = false;
+		
 		return room;
 		break;
 	case 2:
@@ -164,13 +172,25 @@ int Game::currentRoom(int pos, std::vector<int> dungeon)
 	
 }
 
+void Game::end()
+{
+	cout << string(100, '\n');
+	cout << "Congratulations, you have found the treasure room! Game Over" << endl;
+	delete player;
+	delete enemy;
+	delete roomgenerator;
+	delete battle;
+}
+
 void Game::runningGame(std::vector<int> dungeon)
 {
 	
 	int pos = player->currentPos();
-	Game::currentRoom(pos, dungeon);
 
-	std::cout << "Move Left: 0,  Move Right:  1, Pray: 2,  Attack:  3" << std::endl;
+
+	int room = Game::currentRoom(pos, dungeon);
+
+	std::cout << "Move Left: 0,  Move Right:  1, Pray: 2,  Attack:  3,   Defend: 4" << std::endl;
 
 	int action;
 	std::cin >> action;
@@ -178,15 +198,45 @@ void Game::runningGame(std::vector<int> dungeon)
 	switch (action) {
 	case 0: case 1:
 
-		pos = player->move(pos, action);
+		if (canMove == true) {
+			pos = player->move(pos, action);
+			break;
+		}
+		
+		cout << "You cannot leave this room yet!" << endl;
 		break;
 
 	case 2:
 		player->pray();
+		player->canPray = false;
 		break;
 
 	case 3:
+		if (room == 1) {
 
+			if (enemy->health <= 0) {
+				canMove = true;
+				cout << "You have slain the monster." << endl;
+			}
+
+			int dmg = player->attack();
+			int attack = battle->getPlayerAttack(player->getName(), dmg);
+			cout << player->getName() << "'s health is at " << player->health << endl;
+		}
+		break;
+	case 4:
+		if (room == 1) {
+			
+			
+
+
+		}
+		break;
+
+	}
+
+	if (room == 2) {
+		Game::end();
 	}
 
 	

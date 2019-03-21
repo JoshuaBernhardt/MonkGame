@@ -10,7 +10,9 @@ public:
 	Enemy();
 	~Enemy();
 
-	void attack();
+	int attack(int diff);
+
+	int health;
 
 
 private:

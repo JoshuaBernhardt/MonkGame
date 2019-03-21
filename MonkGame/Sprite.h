@@ -9,13 +9,17 @@ public:
 	Sprite();
 	~Sprite();
 
-	void attack();
+	int attack();
+
+	int health;
+
+	int takeDamage(int health, int dmg);
 
 
 
 protected:
 
-	int health;
+	
 	
 
 };

@@ -11,18 +11,19 @@ public:
 	int *pos = 0;
 	bool canPray = false;
 	bool canMove = true;
+	int *health;
+
 
 private:
 	std::string name;
 	std::string description;
-	int health = 15;
 	
 
 };
 
 Player::Player()
 {
-
+	this->health = 15;
 }
 
 Player::~Player()
@@ -30,6 +31,8 @@ Player::~Player()
 
 void Player::pray()
 {
+
+
 	if (canPray == false) {
 		std::cout << "You cannot pray outside of a prayer room!" << std::endl;
 		return;
