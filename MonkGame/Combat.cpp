@@ -8,6 +8,7 @@ int Combat::getPlayerAttack(std::string name, int dmg)
 {
 
 	if (dmg == 0) {
+		std::cout << name << " attacks but misses!" << std::endl;
 		return dmg;
 	}
 
