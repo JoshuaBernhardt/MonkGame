@@ -38,9 +38,8 @@ void Player::pray()
 		return;
 	}
 
-	health += 3;
-	std::cout << "You pray and regain some health." << std::endl;
-	std::cout << health << std::endl;
+	health = 15;
+	std::cout << "You pray and refill your health." << std::endl;
 
 }
 
@@ -69,9 +68,9 @@ std::string Player::getDesc()
 
 int Player::move(int pos, int input) {
 	
-	switch (input) {
+	switch (input) {   //determine position in dungeon
 	case 0:
-		if (pos > 0) {
+		if (pos > 0) {  //prevents moving out of bounds
 			pos -= 1;
 			return pos;
 			break;
@@ -83,7 +82,7 @@ int Player::move(int pos, int input) {
 
 	case 1:
 
-		if (pos < 10) {
+		if (pos < 10) { //Checks if at end
 			pos += 1;
 			return pos;
 			break;

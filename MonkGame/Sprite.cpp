@@ -10,7 +10,7 @@ Sprite::~Sprite()
 
 int Sprite::attack()
 {
-	int chance = rand() % 100;
+	int chance = rand() % 100; //attack with 50% chance of success
 
 	if (chance > 50) {
 		return 3;
@@ -22,12 +22,12 @@ int Sprite::attack()
 
 int Sprite::takeDamage(int health, int dmg)
 {
-	if ((health - dmg) <= 0) {
-		std::cout << "Game Over, you died." << std::endl;
+	if ((this->health - dmg) <= 0) {
+		return 0; 
 	}
 
 
-	health -= dmg;
+	this->health -= dmg;
 
-	return health;
+	return this->health;
 }

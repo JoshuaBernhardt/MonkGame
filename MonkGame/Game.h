@@ -29,11 +29,11 @@ public:
 
 	std::vector<int> createDungeon();
 
-	int currentRoom(int pos, std::vector<int> dungeon);
+	int currentRoom(std::vector<int> dungeon, int pos);
 
 	void runningGame(std::vector<int> dungeon);
 
-	void end();
+	void end(int result);
 
 
 

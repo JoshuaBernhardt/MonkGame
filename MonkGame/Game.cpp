@@ -32,7 +32,7 @@ void Game::update()
 
 void Game::updateLog(std::string text)
 {
-
+	//adds actions to file log.txt
 	
 	ofstream log;
 	log.open("log.txt", std::ios_base::app);
@@ -53,7 +53,7 @@ int Game::getDifficulty() {
 
 void Game::setDifficulty(int diff)
 {
-	difficulty = diff;
+	difficulty = diff;   //handling of difficulty
 
 	switch(difficulty) {
 	case 0:
@@ -77,7 +77,7 @@ void Game::setDifficulty(int diff)
 
 std::string Game::createPlayer()
 {
-	player = new Player;
+	player = new Player;  //init the player
 
 	std::string name;
 	std::string desc;
@@ -99,7 +99,7 @@ std::string Game::createPlayer()
 
 	std::string n = player->getName();
 
-	updateLog(name);
+	updateLog(name);  //add to log
 	updateLog(desc);
 
 	return n;
@@ -108,7 +108,7 @@ std::string Game::createPlayer()
 
 void Game::createEnemy()
 {
-	enemy = new Enemy;
+	enemy = new Enemy;  //create enemy object
 }
 
 void Game::startGame()
@@ -123,10 +123,7 @@ void Game::startGame()
 	std::cout << "2: Normal" << std::endl;
 	std::cout << "3: Hard" << std::endl;
 
-
-	
-
-	
+	//start the game
 
 }
 
@@ -134,33 +131,36 @@ void Game::startGame()
 
 std::vector<int> Game::createDungeon()
 {
-	roomgenerator = new RoomGenerator;
+	roomgenerator = new RoomGenerator;   //generate the dungeon using algorithm
 
 	std::vector<int> dungeon = roomgenerator->generateDungeon();
 
 	return dungeon;
 }
 
-int Game::currentRoom(int pos, std::vector<int> dungeon)
+int Game::currentRoom(std::vector<int> dungeon, int pos)
 {
-	
-	int room = dungeon.at(pos);
+	int room = dungeon.at(pos);  //determine position of player in dungeon and thus what room they are in
 
 	switch (room) {
 	case 0:
-		std::cout << "Current room is prayer room." << std::endl;
+		std::cout << "Current room is prayer room.\n" << std::endl;
+		updateLog("Current Room is prayer room.");
 		player->canPray = true;
 		return room;
 		break;
 	case 1:
-		std::cout << "Current room is monster room." << std::endl;
-		player->canPray = false;
+		std::cout << "Current room is monster room.\n" << std::endl;
+		updateLog("Current Room is monster room.");
+		player->canPray = false;    //prevents movement and praying
 		canMove = false;
+		cout << "Monster health is: " << enemy->health << endl;
 		
 		return room;
 		break;
 	case 2:
-		std::cout << "Current room is treasure room." << std::endl;
+		std::cout << "Current room is treasure room.\n" << std::endl;
+		updateLog("Current Room is treasure room.");
 		player->canPray = false;
 		return room;
 		break;
@@ -172,25 +172,53 @@ int Game::currentRoom(int pos, std::vector<int> dungeon)
 	
 }
 
-void Game::end()
-{
-	cout << string(100, '\n');
-	cout << "Congratulations, you have found the treasure room! Game Over" << endl;
-	delete player;
+void Game::end(int result)
+{  //end the game
+
+	switch (result) {
+	case 0:
+		cout << string(100, '\n');
+		cout << "Congratulations, you have found the treasure room! Game Over" << endl;
+		cout << "Enter any action to collect!" << endl;
+		updateLog("Congratulations, you have found the treasure room! Game Over");
+		updateLog("Enter any action to collect!");  //if end is positive
+		
+		break;
+	case 1:
+		cout << string(100, '\n');   //if player dies
+		cout << "You died, game over" << endl;
+		updateLog("You died, game over");
+		break;
+	}
+
+	delete player;  //cleanup
 	delete enemy;
 	delete roomgenerator;
 	delete battle;
-}
+	isRunning = false;
+	}
+	
 
 void Game::runningGame(std::vector<int> dungeon)
 {
+
+	if (player->health <= 0) {
+		Game::end(1);
+		isRunning = false;
+	}
 	
-	int pos = player->currentPos();
+	int pos = player->currentPos();  //the main game loop
+
+	std::cout << "Move Left: 0,  Move Right:  1, Pray: 2,  Attack:  3,   Defend: 4\n" << std::endl;
+
+	int room = Game::currentRoom(dungeon, pos); //get current room
 
 
-	int room = Game::currentRoom(pos, dungeon);
 
-	std::cout << "Move Left: 0,  Move Right:  1, Pray: 2,  Attack:  3,   Defend: 4" << std::endl;
+	
+	cout << player->getName() << "'s health is at " << player->health << endl;
+	updateLog("players health is at " + player->health);
+	
 
 	int action;
 	std::cin >> action;
@@ -211,36 +239,94 @@ void Game::runningGame(std::vector<int> dungeon)
 		player->canPray = false;
 		break;
 
-	case 3:
+	case 3:  //attack combat
 		if (room == 1) {
+			cout << player->getName() << "'s health is at " << player->health << endl;
+			cout << "Monster health is: " << enemy->health << endl;
+			updateLog("Monster health is: " + enemy->health);
 
 			if (enemy->health <= 0) {
 				canMove = true;
-				cout << "You have slain the monster." << endl;
+				cout << "You have slain the monster.\n" << endl;
+				cout << "You move to the next room...\n" << endl;
+				pos = player->move(pos, 1);
+				if (room == 2) {
+					Game::end(0);
+				}
+				enemy->health = 8;
+				break;
 			}
 
 			int dmg = player->attack();
 			int attack = battle->getPlayerAttack(player->getName(), dmg);
-			cout << player->getName() << "'s health is at " << player->health << endl;
+
+			if (((enemy->health) - attack) <= 0) {   //prevents health going out of range
+				canMove = true;
+				cout << "You have slain the monster.\n" << endl;
+				cout << "You move to the next room...\n" << endl;
+				pos = player->move(pos, 1);
+				enemy->health = 8;
+				break;
+			}
+			enemy->health = enemy->health - attack;  //get attack
+			int enemattack = enemy->attack(difficulty);
+
+
+			if ((player->health-enemattack) <=0) {
+				player->health = 1;
+				Game::end(1);
+				isRunning = false;
+			}
+			player->health = player->health - enemattack;
+			
 		}
 		break;
 	case 4:
 		if (room == 1) {
 			
-			
+			cout << "You take a defensive stance and your health increases by 1!" << endl;
+			updateLog("You take a defensive stance and your health increases by 1!");
+			player->health += 1;
+
+			cout << player->getName() << "'s health is at " << player->health << endl;
+			cout << "Monster health is: " << enemy->health << endl;
+			updateLog("Monster health is: " + enemy->health);
+
+			if (enemy->health <= 0) { //kill monster
+				canMove = true;
+				cout << "You have slain the monster.\n" << endl;
+				cout << "You move to the next room...\n" << endl;
+				pos = player->move(pos, 1);
+				enemy->health = 8;  //reset object for next battle
+				break;
+			}
+
+			int enemattack = enemy->attack(difficulty);
+
+
+			if ((player->health - enemattack) <= 0) {
+				player->health = 1;
+				Game::end(1);
+				isRunning = false;
+			}
+			player->health = player->health - enemattack;
 
 
 		}
 		break;
 
+	case 99:
+		Game::end(0);
+		isRunning = false;  //End the game before reaching the end for dev purposes
+
 	}
 
 	if (room == 2) {
-		Game::end();
+		Game::end(0);  //if treasure room reached
 	}
 
 	
-	player->pos = pos;
+	player->pos = pos; //update position
 
 }
 

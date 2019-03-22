@@ -13,13 +13,16 @@ RoomGenerator::~RoomGenerator()
 
 std::vector<int> RoomGenerator::generateDungeon()
 {
+	//generates 10 random rooms
+	//can be expanded
+
 	std::vector<int> dungeon;
 
-	for (int i = 0; i < 10; i++) {
+	for (int i = 0; i < 10; i++) {  //go through vector
 		dungeon.push_back(randomRoom());
 	}
 	
-	dungeon.push_back(2);
+	dungeon.push_back(2); //adds treasure room at the end
 
 	return dungeon;
 	
@@ -29,6 +32,7 @@ std::vector<int> RoomGenerator::generateDungeon()
 
 int RoomGenerator::randomRoom()
 {
+	//randomly determine a room to add to the dungeon
 
 
 	int selector = rand() % 6;
