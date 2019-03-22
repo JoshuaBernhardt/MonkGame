@@ -29,6 +29,7 @@ int main(int argc, char *argv[])
 		if (cin.fail())  //If invalid input is received
 		{
 
+
 			std::cout << "Invalid difficulty specified, defaulting to Normal." << std::endl;
 			difficulty = 2;
 		}

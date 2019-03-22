@@ -216,12 +216,19 @@ void Game::runningGame(std::vector<int> dungeon)
 
 
 	
-	cout << player->getName() << "'s health is at " << player->health << endl;
+	cout << player->getName() << "'s health is at " << player->health << "\n" << endl;
 	updateLog("players health is at " + player->health);
 	
 
 	int action;
 	std::cin >> action;
+
+	if (cin.fail()) { //if input is not int
+		cin.clear();
+		cin.ignore(numeric_limits<streamsize>::max(), '\n');
+		action = 0;
+		cout << "Enter a valid input! (int) \n" << endl;
+	}
 
 	switch (action) {
 	case 0: case 1:
