@@ -27,7 +27,7 @@ int Enemy::attack(int diff) {
 
 	int chance = rand() % 100;   //50% chance of failure
 
-	if (chance > 50) {
+	if (chance > 65) {
 		switch (diff) {
 		case 0:
 			std::cout << "Dealing 1 damage!" << std::endl;

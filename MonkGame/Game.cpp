@@ -160,7 +160,8 @@ int Game::currentRoom(std::vector<int> dungeon, int pos)
 		break;
 	case 2:
 		std::cout << "Current room is treasure room.\n" << std::endl;
-		updateLog("Current Room is treasure room.");
+		cout << "Enter any action to collect!" << endl;
+		updateLog("Enter any action to collect!");
 		player->canPray = false;
 		return room;
 		break;
@@ -179,9 +180,8 @@ void Game::end(int result)
 	case 0:
 		cout << string(100, '\n');
 		cout << "Congratulations, you have found the treasure room! Game Over" << endl;
-		cout << "Enter any action to collect!" << endl;
+		
 		updateLog("Congratulations, you have found the treasure room! Game Over");
-		updateLog("Enter any action to collect!");  //if end is positive
 		
 		break;
 	case 1:

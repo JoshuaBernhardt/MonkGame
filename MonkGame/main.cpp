@@ -21,9 +21,8 @@ int main(int argc, char *argv[])
 
 		game = new Game();  //start the game, acting as observer
 
-		
-
-
+		game->startGame();
+	
 
 		std::cin >> difficulty; //choose difficulty
 

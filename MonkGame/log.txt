@@ -1,0 +1,459 @@
+Josh
+Warrior
+Current Room is prayer room.
+is at 
+Current Room is prayer room.
+is at 
+Current Room is prayer room.
+is at 
+Current Room is prayer room.
+is at 
+Current Room is prayer room.
+is at 
+Current Room is prayer room.
+is at 
+Current Room is monster room.
+is at 
+health is: 
+Current Room is monster room.
+is at 
+er health is: 
+Current Room is monster room.
+th is at 
+nster health is: 
+Current Room is monster room.
+th is at 
+nster health is: 
+Current Room is monster room.
+th is at 
+nster health is: 
+Current Room is monster room.
+th is at 
+health is: 
+Current Room is monster room.
+ealth is at 
+er health is: 
+Current Room is monster room.
+s health is at 
+nster health is: 
+Current Room is monster room.
+s health is at 
+You take a defensive stance and your health increases by 1!
+health is: 
+Current Room is monster room.
+ health is at 
+health is: 
+Current Room is monster room.
+ers health is at 
+health is: 
+Current Room is monster room.
+ers health is at 
+health is: 
+Current Room is monster room.
+ers health is at 
+You take a defensive stance and your health increases by 1!
+er health is: 
+Current Room is monster room.
+rs health is at 
+er health is: 
+Current Room is monster room.
+ayers health is at 
+nster health is: 
+You died, game over
+Josh
+Warrior
+Current Room is monster room.
+is at 
+Current Room is monster room.
+is at 
+health is: 
+Current Room is monster room.
+is at 
+health is: 
+Current Room is monster room.
+is at 
+er health is: 
+Current Room is monster room.
+h is at 
+nster health is: 
+Current Room is prayer room.
+h is at 
+Current Room is prayer room.
+is at 
+Current Room is monster room.
+is at 
+health is: 
+Current Room is monster room.
+is at 
+health is: 
+Current Room is monster room.
+is at 
+health is: 
+Current Room is monster room.
+h is at 
+er health is: 
+Current Room is monster room.
+lth is at 
+nster health is: 
+Current Room is prayer room.
+lth is at 
+Current Room is prayer room.
+is at 
+Current Room is prayer room.
+is at 
+Current Room is monster room.
+is at 
+health is: 
+Current Room is monster room.
+h is at 
+er health is: 
+Current Room is monster room.
+lth is at 
+er health is: 
+Current Room is monster room.
+ealth is at 
+er health is: 
+Current Room is monster room.
+ health is at 
+nster health is: 
+Current Room is monster room.
+rs health is at 
+nster health is: 
+Current Room is monster room.
+rs health is at 
+You take a defensive stance and your health increases by 1!
+health is: 
+Current Room is monster room.
+ers health is at 
+You take a defensive stance and your health increases by 1!
+health is: 
+Current Room is monster room.
+rs health is at 
+You take a defensive stance and your health increases by 1!
+health is: 
+Current Room is monster room.
+ers health is at 
+You take a defensive stance and your health increases by 1!
+health is: 
+Current Room is monster room.
+rs health is at 
+You take a defensive stance and your health increases by 1!
+health is: 
+Current Room is monster room.
+s health is at 
+health is: 
+Current Room is monster room.
+ers health is at 
+er health is: 
+Current Room is monster room.
+ayers health is at 
+You take a defensive stance and your health increases by 1!
+er health is: 
+Current Room is monster room.
+layers health is at 
+er health is: 
+You died, game over
+Josh
+Are
+Current Room is monster room.
+is at 
+health is: 
+Current Room is monster room.
+h is at 
+health is: 
+Current Room is monster room.
+lth is at 
+er health is: 
+Current Room is monster room.
+lth is at 
+nster health is: 
+Current Room is monster room.
+lth is at 
+health is: 
+Current Room is monster room.
+lth is at 
+health is: 
+Current Room is monster room.
+lth is at 
+health is: 
+Current Room is monster room.
+ealth is at 
+health is: 
+Current Room is monster room.
+ health is at 
+er health is: 
+Current Room is monster room.
+ health is at 
+er health is: 
+Current Room is monster room.
+ health is at 
+er health is: 
+Current Room is monster room.
+rs health is at 
+er health is: 
+Current Room is monster room.
+rs health is at 
+er health is: 
+Current Room is monster room.
+yers health is at 
+nster health is: 
+Current Room is monster room.
+yers health is at 
+nster health is: 
+Current Room is prayer room.
+yers health is at 
+Current Room is prayer room.
+is at 
+Current Room is monster room.
+is at 
+health is: 
+Current Room is monster room.
+h is at 
+er health is: 
+Current Room is monster room.
+lth is at 
+er health is: 
+Current Room is monster room.
+ealth is at 
+er health is: 
+Current Room is monster room.
+ health is at 
+er health is: 
+Current Room is monster room.
+rs health is at 
+nster health is: 
+Current Room is monster room.
+rs health is at 
+health is: 
+Current Room is monster room.
+yers health is at 
+er health is: 
+Current Room is monster room.
+layers health is at 
+nster health is: 
+Current Room is monster room.
+layers health is at 
+nster health is: 
+Current Room is monster room.
+layers health is at 
+You take a defensive stance and your health increases by 1!
+health is: 
+You died, game over
+Josh
+Warrior
+Current Room is prayer room.
+is at 
+Current Room is monster room.
+is at 
+health is: 
+Current Room is monster room.
+is at 
+er health is: 
+Current Room is monster room.
+is at 
+er health is: 
+Current Room is monster room.
+is at 
+nster health is: 
+Current Room is monster room.
+h is at 
+nster health is: 
+Current Room is monster room.
+lth is at 
+nster health is: 
+Current Room is monster room.
+lth is at 
+health is: 
+Current Room is monster room.
+lth is at 
+health is: 
+Current Room is monster room.
+ealth is at 
+er health is: 
+Current Room is monster room.
+ealth is at 
+nster health is: 
+Current Room is monster room.
+ealth is at 
+nster health is: 
+Current Room is prayer room.
+ealth is at 
+Current Room is prayer room.
+is at 
+Current Room is prayer room.
+is at 
+Current Room is prayer room.
+is at 
+Current Room is monster room.
+is at 
+health is: 
+Current Room is monster room.
+h is at 
+health is: 
+Current Room is monster room.
+lth is at 
+health is: 
+Current Room is monster room.
+lth is at 
+health is: 
+Current Room is monster room.
+lth is at 
+health is: 
+Current Room is monster room.
+lth is at 
+er health is: 
+Current Room is monster room.
+ealth is at 
+er health is: 
+Current Room is monster room.
+ealth is at 
+er health is: 
+Current Room is monster room.
+ health is at 
+nster health is: 
+Current Room is monster room.
+ health is at 
+health is: 
+Current Room is monster room.
+ health is at 
+health is: 
+Current Room is monster room.
+ health is at 
+health is: 
+Current Room is monster room.
+ health is at 
+er health is: 
+Current Room is monster room.
+ health is at 
+nster health is: 
+Current Room is monster room.
+ health is at 
+health is: 
+Current Room is monster room.
+rs health is at 
+er health is: 
+Current Room is monster room.
+yers health is at 
+nster health is: 
+Current Room is monster room.
+yers health is at 
+nster health is: 
+Current Room is monster room.
+yers health is at 
+nster health is: 
+Current Room is monster room.
+layers health is at 
+nster health is: 
+Current Room is monster room.
+layers health is at 
+nster health is: 
+Current Room is monster room.
+layers health is at 
+nster health is: 
+Current Room is monster room.
+layers health is at 
+nster health is: 
+Current Room is monster room.
+layers health is at 
+You take a defensive stance and your health increases by 1!
+health is: 
+Current Room is monster room.
+ayers health is at 
+You take a defensive stance and your health increases by 1!
+health is: 
+Current Room is monster room.
+yers health is at 
+You take a defensive stance and your health increases by 1!
+health is: 
+Current Room is monster room.
+ayers health is at 
+You take a defensive stance and your health increases by 1!
+health is: 
+Current Room is monster room.
+yers health is at 
+You take a defensive stance and your health increases by 1!
+health is: 
+Current Room is monster room.
+ers health is at 
+You take a defensive stance and your health increases by 1!
+health is: 
+Current Room is monster room.
+rs health is at 
+You take a defensive stance and your health increases by 1!
+health is: 
+Current Room is monster room.
+ers health is at 
+You take a defensive stance and your health increases by 1!
+health is: 
+Current Room is monster room.
+yers health is at 
+You take a defensive stance and your health increases by 1!
+health is: 
+Current Room is monster room.
+ers health is at 
+You take a defensive stance and your health increases by 1!
+health is: 
+Current Room is monster room.
+rs health is at 
+You take a defensive stance and your health increases by 1!
+health is: 
+Current Room is monster room.
+s health is at 
+You take a defensive stance and your health increases by 1!
+health is: 
+Current Room is monster room.
+ health is at 
+You take a defensive stance and your health increases by 1!
+health is: 
+Current Room is monster room.
+health is at 
+health is: 
+Current Room is monster room.
+s health is at 
+You take a defensive stance and your health increases by 1!
+health is: 
+Current Room is monster room.
+ health is at 
+health is: 
+Current Room is monster room.
+ health is at 
+You take a defensive stance and your health increases by 1!
+health is: 
+Current Room is monster room.
+health is at 
+health is: 
+Current Room is monster room.
+health is at 
+You take a defensive stance and your health increases by 1!
+er health is: 
+Current Room is monster room.
+ health is at 
+You take a defensive stance and your health increases by 1!
+er health is: 
+Current Room is monster room.
+s health is at 
+You take a defensive stance and your health increases by 1!
+er health is: 
+Current Room is monster room.
+ health is at 
+You take a defensive stance and your health increases by 1!
+er health is: 
+Current Room is monster room.
+health is at 
+er health is: 
+Current Room is monster room.
+health is at 
+er health is: 
+Current Room is monster room.
+health is at 
+nster health is: 
+Current Room is monster room.
+health is at 
+nster health is: 
+Current Room is monster room.
+health is at 
+nster health is: 
+Current Room is treasure room.
+health is at 
+Congratulations, you have found the treasure room! Game Over
+Enter any action to collect!
