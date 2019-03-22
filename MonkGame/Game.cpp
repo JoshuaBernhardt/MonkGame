@@ -223,6 +223,13 @@ void Game::runningGame(std::vector<int> dungeon)
 	int action;
 	std::cin >> action;
 
+	if (cin.fail()) { //if input is not int
+		cin.clear();
+		cin.ignore(numeric_limits<streamsize>::max(), '\n');
+		action = 0;
+		cout << "Enter a valid input! (int) \n" << endl;
+	}
+
 	switch (action) {
 	case 0: case 1:
 
