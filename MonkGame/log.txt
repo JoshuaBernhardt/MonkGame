@@ -457,3 +457,164 @@ Current Room is treasure room.
 health is at 
 Congratulations, you have found the treasure room! Game Over
 Enter any action to collect!
+J
+J
+Current Room is monster room.
+is at 
+You take a defensive stance and your health increases by 1!
+health is: 
+Current Room is monster room.
+th is at 
+health is: 
+Current Room is monster room.
+th is at 
+er health is: 
+Current Room is prayer room.
+th is at 
+Current Room is prayer room.
+is at 
+Current Room is prayer room.
+is at 
+Current Room is prayer room.
+is at 
+Current Room is monster room.
+is at 
+health is: 
+Current Room is monster room.
+is at 
+health is: 
+Current Room is monster room.
+is at 
+J
+j
+Current Room is prayer room.
+is at 
+Current Room is prayer room.
+is at 
+Current Room is prayer room.
+is at 
+Current Room is prayer room.
+is at 
+Current Room is monster room.
+is at 
+health is: 
+Current Room is monster room.
+is at 
+j
+j
+Current Room is monster room.
+is at 
+J
+J
+Current Room is monster room.
+is at 
+health is: 
+Current Room is monster room.
+is at 
+health is: 
+Current Room is monster room.
+is at 
+er health is: 
+Current Room is monster room.
+is at 
+er health is: 
+Current Room is prayer room.
+is at 
+Josh
+Warrior
+Current Room is prayer room.
+is at 
+Current Room is prayer room.
+is at 
+Current Room is monster room.
+is at 
+health is: 
+Current Room is monster room.
+is at 
+er health is: 
+Current Room is monster room.
+is at 
+er health is: 
+Current Room is monster room.
+is at 
+er health is: 
+Current Room is monster room.
+is at 
+er health is: 
+Current Room is monster room.
+is at 
+nster health is: 
+Current Room is prayer room.
+is at 
+Current Room is prayer room.
+is at 
+Current Room is monster room.
+is at 
+health is: 
+Current Room is monster room.
+is at 
+nster health is: 
+Current Room is monster room.
+is at 
+health is: 
+Current Room is monster room.
+th is at 
+health is: 
+Current Room is monster room.
+th is at 
+health is: 
+Current Room is monster room.
+th is at 
+health is: 
+Current Room is monster room.
+th is at 
+health is: 
+Current Room is monster room.
+th is at 
+health is: 
+Current Room is monster room.
+th is at 
+er health is: 
+Current Room is monster room.
+th is at 
+er health is: 
+Current Room is monster room.
+th is at 
+er health is: 
+Current Room is monster room.
+th is at 
+nster health is: 
+Current Room is monster room.
+th is at 
+health is: 
+Current Room is monster room.
+ealth is at 
+er health is: 
+Current Room is monster room.
+s health is at 
+er health is: 
+Current Room is monster room.
+s health is at 
+er health is: 
+Current Room is monster room.
+s health is at 
+nster health is: 
+Current Room is monster room.
+s health is at 
+nster health is: 
+Current Room is prayer room.
+s health is at 
+Current Room is prayer room.
+is at 
+Current Room is monster room.
+is at 
+health is: 
+Current Room is monster room.
+th is at 
+er health is: 
+Current Room is monster room.
+th is at 
+nster health is: 
+Enter any action to collect!
+th is at 
+Congratulations, you have found the treasure room! Game Over

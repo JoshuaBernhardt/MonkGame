@@ -29,7 +29,7 @@ int main(int argc, char *argv[])
 		if (cin.fail())  //If invalid input is received
 		{
 
-			std::cout << "Invalid difficulty specified, defaulting to Normal." << std::endl;
+			std::cout << "\nInvalid difficulty specified, defaulting to Normal.\n" << std::endl;
 			difficulty = 2;
 		}
 
@@ -47,7 +47,7 @@ int main(int argc, char *argv[])
 		return EXIT_SUCCESS;
 	}
 	catch (std::string e) {
-		cout << "An unexpected error occurred. Closing game..." << endl;
+		cout << "\n\nAn unexpected error occurred. Closing game..." << endl;
 		return EXIT_FAILURE;  //If something goes wrong
 	}
 	

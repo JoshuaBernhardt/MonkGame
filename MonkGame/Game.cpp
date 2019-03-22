@@ -82,13 +82,13 @@ std::string Game::createPlayer()
 	std::string name;
 	std::string desc;
 
-	std::cout << "Please enter a name for your character." << std::endl;
+	std::cout << "Please enter a name for your character.\n" << std::endl;
 
 	cin.ignore();
 
 	getline(cin, name);
 
-	std::cout << "Please enter a description for your character." << std::endl;
+	std::cout << "\nPlease enter a description for your character.\n" << std::endl;
 
 	getline(cin, desc);
 
@@ -121,7 +121,7 @@ void Game::startGame()
 	std::cout << "0: Super Easy" << std::endl;
 	std::cout << "1: Easy" << std::endl;
 	std::cout << "2: Normal" << std::endl;
-	std::cout << "3: Hard" << std::endl;
+	std::cout << "3: Hard\n" << std::endl;
 
 	//start the game
 
@@ -154,7 +154,7 @@ int Game::currentRoom(std::vector<int> dungeon, int pos)
 		updateLog("Current Room is monster room.");
 		player->canPray = false;    //prevents movement and praying
 		canMove = false;
-		cout << "Monster health is: " << enemy->health << endl;
+		cout << "Monster health is: " << enemy->health << "\n" << endl;
 		
 		return room;
 		break;
@@ -216,7 +216,7 @@ void Game::runningGame(std::vector<int> dungeon)
 
 
 	
-	cout << player->getName() << "'s health is at " << player->health << endl;
+	cout << player->getName() << "'s health is at " << player->health << "\n" << endl;
 	updateLog("players health is at " + player->health);
 	
 
@@ -231,7 +231,7 @@ void Game::runningGame(std::vector<int> dungeon)
 			break;
 		}
 		
-		cout << "You cannot leave this room yet!" << endl;
+		cout << "You cannot leave this room yet!\n" << endl;
 		break;
 
 	case 2:
@@ -241,8 +241,8 @@ void Game::runningGame(std::vector<int> dungeon)
 
 	case 3:  //attack combat
 		if (room == 1) {
-			cout << player->getName() << "'s health is at " << player->health << endl;
-			cout << "Monster health is: " << enemy->health << endl;
+			cout << "\n" << player->getName() << "'s health is at " << player->health << "\n" << endl;
+			cout << "Monster health is: " << enemy->health << "\n" << endl;
 			updateLog("Monster health is: " + enemy->health);
 
 			if (enemy->health <= 0) {

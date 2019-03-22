@@ -12,10 +12,16 @@ int Sprite::attack()
 {
 	int chance = rand() % 100; //attack with 50% chance of success
 
+	if (chance > 90) {
+		return 6;      //rare critical attack 10% chance
+	}
+
+
 	if (chance > 50) {
 		return 3;
 	}
 
+	
 	return 0;
 
 }
